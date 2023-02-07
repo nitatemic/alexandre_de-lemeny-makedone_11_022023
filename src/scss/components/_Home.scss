@@ -1,0 +1,32 @@
+.home {
+
+  &-tagline {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0;
+    width: 100%;
+
+
+    &-img {
+      filter: brightness(75%);
+      border-radius: 25px
+    }
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      &-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
