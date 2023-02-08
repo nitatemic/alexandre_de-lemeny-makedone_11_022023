@@ -2,6 +2,7 @@
   max-width: 100%;
   height: auto;
   display: flex;
+  border-radius: 25px;
 
   &-content {
     position: relative;
@@ -10,8 +11,12 @@
     display: flex;
 
     &-img {
-      border-radius: 5rem;
-      object-fit: cover;
+
+
+      &-file {
+        border-radius: 25px;
+        object-fit: cover;
+      }
     }
 
     /* Title should be on the bottom of the image */
@@ -21,6 +26,7 @@
       left: 0;
       width: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+      border-radius: 25px;
 
       &-title {
         font-family: 'Montserrat', sans-serif;
