@@ -1,8 +1,12 @@
-export default function LogementDetails(props) {
-  const { logement } = props.location.state;
+import { useParams } from 'react-router-dom';
+
+export default function LogementDetails() {
+  const { id } = useParams();
+
   return (
     <div>
-      {/* Afficher les détails du logement */}
+      <h1>Logement Details</h1>
+      <p>{id}</p>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TaglineBG from '../assets/img/TaglineBG.webp';
 import Card from './Card';
-import Header from './Header';
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -22,7 +21,6 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       <div className="home">
         <div className="home-tagline">
           <img className="home-tagline-img" src={TaglineBG} alt="Tagline Background" />
