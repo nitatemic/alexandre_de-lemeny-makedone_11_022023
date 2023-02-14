@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Card(props) {
   useEffect(() => {
@@ -9,7 +10,7 @@ export default function Card(props) {
   return (
 
     <div className="card">
-      <a href={logement.id}>
+      <Link to={`/logement/${props.logement.id}`}>
         {/* TODO: Add link to the card */}
         <div className="card-content">
           <div className="card-content-img">
@@ -19,7 +20,7 @@ export default function Card(props) {
             <h3 className="card-content-container-title">{logement.title}</h3>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
