@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import kasaLogo from '../assets/KasaLogo.svg';
 
 export default function Header() {
@@ -7,18 +7,19 @@ export default function Header() {
 
   return (
     <header className="header">
-      <a className="header-logo" href="#">
+      <Link className="header-logo" to="/">
         <img src={kasaLogo} className="header-logo-img" alt="Kasa Logo" />
-      </a>
+      </Link>
       <nav className="header-nav">
         <ul className="header-nav-list">
           <li className="header-nav-list-item">
-            {location.pathname === '/' ? <a className="header-nav-list-item-link active" href="/">Accueil</a>
-						  : <a className="header-nav-list-item-link" href="/">Accueil</a>}
+            {location.pathname === '/' ? <Link className="header-nav-list-item-link active" to="/">Accueil</Link>
+						  : <Link className="header-nav-list-item-link" to="/">Accueil</Link>}
           </li>
           <li className="header-nav-list-item">
-            {location.pathname === '/about' ? <a className="header-nav-list-item-link active" href="/about">A propos</a>
-						  : <a className="header-nav-list-item-link" href="/about">A propos</a>}
+            {location.pathname === '/about'
+              ? <Link className="header-nav-list-item-link active" to="/about">A propos</Link>
+						  : <Link className="header-nav-list-item-link" to="/about">A propos</Link>}
           </li>
         </ul>
       </nav>
