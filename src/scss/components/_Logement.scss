@@ -1,0 +1,116 @@
+@use "../base/colors" as *;
+
+.logement {
+
+  &-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $primary;
+  }
+
+  &-location {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $primary;;
+  }
+
+  &-tag {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    background-color: $primary;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: .5%;
+  }
+
+  &-host {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    &-name {
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: $primary;
+      text-wrap: normal;
+      width: 5rem;
+      margin-right: 1rem;
+    }
+
+    &-img {
+      display: flex;
+      justify-self: flex-end;
+      border-radius: 50%;
+      object-fit: cover;
+      width: 4rem;
+    }
+  }
+
+  &-rating {
+    &-stars {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &-star {
+        color: #E3E3E3;
+
+        &-active {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &-container {
+
+    &-tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+}

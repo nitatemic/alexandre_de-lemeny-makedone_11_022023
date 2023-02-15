@@ -8,12 +8,32 @@
   justify-content: space-between;
   align-items: center;
 
+  &-logo {
+
+    display: flex;
+    max-width: 50%;
+
+    &-img {
+
+      /* For mobile */
+      @media (max-width: 768px) {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   &-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     width: fit-content;
+
+    /* For mobile */
+    @media (max-width: 768px) {
+
+    }
 
     &-list {
       display: inline-flex;
@@ -38,6 +58,15 @@
         font-weight: 500;
         font-size: 24px;
         line-height: 142.6%;
+
+        /* For mobile */
+        @media (max-width: 768px) {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 17px;
+          letter-spacing: 0em;
+          text-align: right;
+        }
 
         &-link {
           color: $primary;

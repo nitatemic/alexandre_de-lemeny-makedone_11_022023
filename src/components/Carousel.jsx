@@ -18,10 +18,22 @@ export default function Carousel(arrayOfPictures) {
   }
 
   return (
-    <div>
-      <img src={images[index]} alt="" />
-      <button onClick={handlePrev}>Prev</button>
-      <button onClick={handleNext}>Next</button>
+    <div className="carousel">
+      <img className="carousel-img" src={images[index]} alt="carousel" />
+      {images.length > 1 && (
+      <div className="carousel-layout-ButtonsContainer">
+        <button onClick={handlePrev} className="carousel-layout-button-prev">
+          <i
+            className="fa-solid fa-angle-left"
+          />
+        </button>
+        <button onClick={handleNext} className="carousel-layout-button-next">
+          <i
+            className="fa-solid fa-angle-right"
+          />
+        </button>
+      </div>
+      )}
     </div>
   );
 }
