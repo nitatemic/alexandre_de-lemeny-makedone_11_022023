@@ -15,12 +15,12 @@ export default function Dropdown(props) {
   const handleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
+  const titleClasses = `dropdown-title ${!isOpen ? 'dropdown-title-closed' : ''}`;
   const dropdownClasses = `dropdown-list ${!isOpen ? 'dropdown-list-closed' : ''}`;
 
   return (
     <div className="dropdown">
-      <div className="dropdown-title">
+      <div className={titleClasses}>
         <h1 className="dropdown-title-text">{title}</h1>
         <button className="dropdown-title-button" type="button" onClick={handleDropdown}>
           <i className={`fa-solid  ${isOpen ? 'fa-angle-up' : 'fa-angle-down'} dropdown-title-button-icon`} />

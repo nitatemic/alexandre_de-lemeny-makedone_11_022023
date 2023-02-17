@@ -131,9 +131,21 @@
     flex-direction: row;
     justify-content: space-between;
 
+    /* For mobile */
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     > * {
       flex-basis: 47%;
       max-width: 47%;
+
+      /* For mobile */
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
 
