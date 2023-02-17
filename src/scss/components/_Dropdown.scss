@@ -57,7 +57,7 @@
     background: #F6F6F6;
     border-radius: 0 0 10px 10px;
     list-style: none;
-    padding: .5rem;
+    padding: .7rem;
     margin: 0;
 
     &-closed {
@@ -81,7 +81,7 @@
       text-align: left;
       color: $primary;
       margin: 0;
-      padding: 0;
+      padding: 0 .7rem 0 .7rem;
     }
   }
 }
