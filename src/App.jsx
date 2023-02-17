@@ -3,7 +3,7 @@ import './scss/_main.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import LogementDetails from './components/LogementDetails';
-import Header from './components/Header.jsx';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
           <Route exact path="/logement/:id" element={<LogementDetails />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
