@@ -57,7 +57,6 @@ export default function LogementDetails() {
           <Dropdown title="Équipements" content={data.equipments} />
         </div>
       </div>
-      <p>{id}</p>
     </div>
   );
 }

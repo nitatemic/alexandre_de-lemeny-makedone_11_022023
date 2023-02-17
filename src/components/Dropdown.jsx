@@ -20,13 +20,12 @@ export default function Dropdown(props) {
 
   return (
     <div className="dropdown">
-      <div className={titleClasses}>
-        <h1 className="dropdown-title-text">{title}</h1>
-        <button className="dropdown-title-button" type="button" onClick={handleDropdown}>
+      <button className="dropdown-title-button" type="button" onClick={handleDropdown}>
+        <div className={titleClasses}>
+          <h1 className="dropdown-title-text">{title}</h1>
           <i className={`fa-solid  ${isOpen ? 'fa-angle-up' : 'fa-angle-down'} dropdown-title-button-icon`} />
-        </button>
-
-      </div>
+        </div>
+      </button>
 
       <ul className={dropdownClasses}>
         {elements.map((element) => (
