@@ -5,6 +5,7 @@ import Home from './components/Home';
 import LogementDetails from './components/LogementDetails';
 import Header from './components/Header';
 import Error from './components/Error';
+import About from './components/About.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/logement/:id" element={<LogementDetails />} />
+          <Route exact path="/about" element={<About />} />
           {/* Route 404 */}
           <Route path="*" element={<Error />} />
         </Routes>

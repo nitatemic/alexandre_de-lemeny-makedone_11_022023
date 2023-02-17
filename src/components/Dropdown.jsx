@@ -15,19 +15,21 @@ export default function Dropdown(props) {
   const handleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const titleClasses = `dropdown-title ${!isOpen ? 'dropdown-title-closed' : ''}`;
-  const dropdownClasses = `dropdown-list ${!isOpen ? 'dropdown-list-closed' : ''}`;
 
   return (
     <div className="dropdown">
-      <button className="dropdown-title-button" type="button" onClick={handleDropdown}>
-        <div className={titleClasses}>
+      <button
+        className={isOpen ? 'dropdown-title-button' : 'dropdown-title-button-closed'}
+        type="button"
+        onClick={handleDropdown}
+      >
+        <div className={isOpen ? 'dropdown-title' : 'dropdown-title-closed'}>
           <h1 className="dropdown-title-text">{title}</h1>
           <i className={`fa-solid  ${isOpen ? 'fa-angle-up' : 'fa-angle-down'} dropdown-title-button-icon`} />
         </div>
       </button>
 
-      <ul className={dropdownClasses}>
+      <ul className={isOpen ? 'dropdown-list' : 'dropdown-list-closed'}>
         {elements.map((element) => (
           <li className="dropdown-list-item"><p className="dropdown-list-item-text">{element}</p></li>
         ))}
