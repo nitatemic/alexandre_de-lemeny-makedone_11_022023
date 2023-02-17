@@ -1,0 +1,9 @@
+.headerAndMain {
+  margin: 0 10% 0 10%;
+
+  /* For mobile */
+  @media (max-width: 768px) {
+    margin: 0 5% 0 5%;
+  }
+}
+

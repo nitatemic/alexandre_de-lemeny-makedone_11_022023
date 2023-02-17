@@ -1,6 +1,8 @@
 @use "base/colors";
 @use "base/typography";
 @use "base/body";
+@use "base/main";
+@use "base/headerAndMain";
 @use "components/Header";
 @use "components/Home";
 @use "components/Card";
@@ -9,3 +11,4 @@
 @use "components/Dropdown";
 @use "components/Carousel";
 @use "components/Error";
+@use "components/Footer";
