@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Carousel from './Carousel';
+import Dropdown from './Dropdown';
 
 export default function LogementDetails() {
   const { id } = useParams();
@@ -46,6 +47,14 @@ export default function LogementDetails() {
               <i className="fa-solid fa-star logement-rating-stars-star" />
             ))}
           </div>
+        </div>
+      </div>
+      <div className="logement-about">
+        <div className="logement-about-description">
+          <Dropdown title="Description" content={data.description} />
+        </div>
+        <div className="logement-about-equipments">
+          <Dropdown title="Équipements" content={data.equipments} />
         </div>
       </div>
       <p>{id}</p>

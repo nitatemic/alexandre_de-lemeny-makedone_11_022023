@@ -125,4 +125,16 @@
     align-items: flex-start;
     margin-bottom: 1rem;
   }
+
+  &-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > * {
+      flex-basis: 47%;
+      max-width: 47%;
+    }
+  }
+
 }
