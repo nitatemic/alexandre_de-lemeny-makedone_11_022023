@@ -20,5 +20,16 @@
         border-radius: 10px;
       }
     }
+
+  }
+
+  &-content {
+    padding: 0 5rem;
+    margin-top: 2rem;
+
+    /* For mobile */
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
