@@ -4,7 +4,7 @@
 
   &-title {
     font-family: Montserrat, sans-serif;
-    font-size: 36px;
+    font-size: calc(20px + .8vw);
     font-weight: 500;
     line-height: 51px;
     letter-spacing: 0;
@@ -20,7 +20,7 @@
 
   &-location {
     font-family: Montserrat, sans-serif;
-    font-size: 18px;
+    font-size: calc(13px + .8vw);
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0em;
@@ -30,16 +30,16 @@
 
   &-tag {
     font-family: Montserrat, sans-serif;
-    font-size: 14px;
+    font-size: calc(10px + .3vw);
     font-weight: 500;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     color: white;
     background-color: $primary;
     border-radius: 10px;
     padding: 5px 10px;
-    margin-right: .5%;
+    margin: .2rem
   }
 
   &-host {
@@ -86,12 +86,13 @@
 
       &-star {
         color: #E3E3E3;
-        font-size: 1.5rem;
+        font-size: calc(15px + 1.5vw);
         margin-right: .5rem;
+
 
         &-active {
           color: $primary;
-          font-size: 1.5rem;
+          font-size: calc(15px + 1.5vw);
           margin-right: .5rem;
         }
       }
@@ -107,6 +108,11 @@
       margin: 0;
       padding: 0;
       list-style: none;
+
+      /* For mobile */
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
     }
   }
 
@@ -116,6 +122,20 @@
     justify-content: flex-start;
     align-items: flex-end;
     margin-top: 1rem;
+
+    /* For mobile */
+    @media (max-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: center;
+      > * {
+        flex-basis: 47%;
+        max-width: 47%;
+        align-self: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 
   &-head {
@@ -124,6 +144,23 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+    /* For mobile */
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    &-container {
+      flex-basis: 70%;
+      max-width: 70%;
+
+      /* For mobile */
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
   }
 
   &-about {
