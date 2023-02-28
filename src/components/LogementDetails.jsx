@@ -12,6 +12,10 @@ export default function LogementDetails() {
       const response = await fetch('/data/logements.json');
       const logements = await response.json();
       const logement = logements.find((element) => element.id === id);
+      /* Si on ne trouve pas de logement, on redirige vers la page d'404 */
+      if (!logement) {
+        window.location = '/404';
+      }
       setData(logement);
     };
     fetchData();
