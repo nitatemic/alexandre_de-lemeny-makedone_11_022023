@@ -23,7 +23,7 @@
     font-size: calc(13px + .8vw);
     font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     color: $primary;;
   }
@@ -86,13 +86,13 @@
 
       &-star {
         color: #E3E3E3;
-        font-size: calc(15px + 1.5vw);
+        font-size: calc(15px + 1vw);
         margin-right: .5rem;
 
 
         &-active {
           color: $primary;
-          font-size: calc(15px + 1.5vw);
+          font-size: calc(15px + 1vw);
           margin-right: .5rem;
         }
       }
