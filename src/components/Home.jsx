@@ -31,8 +31,8 @@ export default function Home() {
         <main className="home-main">
           <div className="home-main-content" />
           <div className="card-container">
-            {data.map((logement) => (
-              <Card logement={logement} />
+            {data.map((logement, index) => (
+              <Card logement={logement} key={`card-${index}`} />
             ))}
           </div>
         </main>
