@@ -33,8 +33,8 @@ export default function LogementDetails() {
           <h1 className="logement-title">{data.title}</h1>
           <h2 className="logement-location">{data.location}</h2>
           <div className="logement-container-tags">
-            {data.tags.map((tag) => (
-              <span className="logement-tag">{tag}</span>
+            {data.tags.map((tag, index) => (
+              <span className="logement-tag" key={`logement-tag-${index}`}>{tag}</span>
             ))}
           </div>
         </div>
@@ -44,11 +44,11 @@ export default function LogementDetails() {
             <img className="logement-host-img" alt={data.host.name} src={data.host.picture} />
           </div>
           <div className="logement-stars">
-            {Array(Number(data.rating)).fill(0).map(() => (
-              <i className="fa-solid fa-star logement-rating-stars-star-active" />
+            {Array(Number(data.rating)).fill(0).map((star, index) => (
+              <i key={index} className="fa-solid fa-star logement-rating-stars-star-active" />
             ))}
-            {Array(5 - Number(data.rating)).fill(0).map(() => (
-              <i className="fa-solid fa-star logement-rating-stars-star" />
+            {Array(5 - Number(data.rating)).fill(0).map((star, index) => (
+              <i key={index} className="fa-solid fa-star logement-rating-stars-star" />
             ))}
           </div>
         </div>

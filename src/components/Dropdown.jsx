@@ -30,8 +30,8 @@ export default function Dropdown(props) {
       </button>
 
       <ul className={isOpen ? 'dropdown-list' : 'dropdown-list-closed'}>
-        {elements.map((element) => (
-          <li className="dropdown-list-item"><p className="dropdown-list-item-text">{element}</p></li>
+        {elements.map((element, index) => (
+          <li key={index} className="dropdown-list-item"><p className="dropdown-list-item-text">{element}</p></li>
         ))}
       </ul>
     </div>
