@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Dropdown(props) {
   /* État du dropdown */
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const { title } = props;
   let elements;
   /* Si props.content est un tableau */
